@@ -41,10 +41,11 @@ Write the main steps of your solution before showing the actual code.
 
 ```text
 START
-1. 
-2. 
-3. 
-4. 
+1. Getting the test cases, numbers of shops, and the positions they are.
+2. Let maximum be minimium and minimum be maximum.
+3. If the positions are bigger or smaller than maximum or minimum, the can replace them and get the real maximum and minimum.
+4. Beacuse the stores are in a straight line, so by subtracting maximum and minimum can get the minimum distance.
+5. [What I made a mistake on] But to *2 (Walk to the stores and walk back to the parking spots)
 END
 ```
 
@@ -60,13 +61,45 @@ Show the code that failed first, then show the corrected version.
 
 **Why it failed:**
 
-- 
-- 
+- I didn't consider to walk by, so the answer /2. 
+- By struture wasn't clear enough to decode quickly, so I don't get enough time to correct my code.
 
 ### Correct Code
 
 ```cpp
-// Paste the corrected or accepted version here.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    
+    int n, x[20];
+    while(t--)
+    {
+        int max = 0;
+        int min = 99;
+        
+        cin >> n;
+        for(int i = 0; i < n; i++)
+        {
+            cin >> x[i];
+        }
+        
+        for(int i = 0; i < n; i++)
+        {
+            if(x[i] > max)
+                max = x[i];
+            if(x[i] < min)
+                min = x[i];
+        }
+        
+        cout << (max - min) * 2 << endl;
+    }
+    return 0;
+}
+
 ```
 
 **Why it works:**
