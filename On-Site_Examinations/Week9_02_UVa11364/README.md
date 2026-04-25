@@ -45,7 +45,8 @@ START
 2. Let maximum be minimium and minimum be maximum.
 3. If the positions are bigger or smaller than maximum or minimum, the can replace them and get the real maximum and minimum.
 4. Beacuse the stores are on a straight line, so by subtracting maximum and minimum can get the minimum distance.
-5. [What I made a mistake on] But to *2 (Walk to the stores and walk back to the parking spots)
+MISTAKE
+5. But to *2 (Walk to the stores and walk back to the parking spots)
 END
 ```
 
