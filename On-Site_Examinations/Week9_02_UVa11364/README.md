@@ -1,7 +1,7 @@
 # UVa 11364 - Optimal Parking
 
 ## Problem Description
-Brief description of the problem here. [Link to problem](https://onlinejudge.org/external/113/11364.pdf)
+Michael wants the minimum distance between his car and the stores he shopped, but back and forth. [Link to problem](https://onlinejudge.org/external/113/11364.pdf)
 
 ## Learning Objectives
 - [ ] 
