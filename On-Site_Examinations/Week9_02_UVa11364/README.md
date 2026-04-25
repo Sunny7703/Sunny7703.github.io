@@ -44,7 +44,7 @@ START
 1. Getting the test cases, numbers of shops, and the positions they are.
 2. Let maximum be minimium and minimum be maximum.
 3. If the positions are bigger or smaller than maximum or minimum, the can replace them and get the real maximum and minimum.
-4. Beacuse the stores are in a straight line, so by subtracting maximum and minimum can get the minimum distance.
+4. Beacuse the stores are on a straight line, so by subtracting maximum and minimum can get the minimum distance.
 5. [What I made a mistake on] But to *2 (Walk to the stores and walk back to the parking spots)
 END
 ```
@@ -104,8 +104,8 @@ int main()
 
 **Why it works:**
 
-- 
-- 
+- By multiplying 2 to get the real distance from walking to the stores and walking back to the car.
+- Clearly structured, easy to find the problem.
 
 
 
@@ -115,10 +115,10 @@ int main()
 
 | Item | Fail Code | Correct Code |
 |---|---|---|
-| Logic |  |  |
-| Edge Cases |  |  |
-| Output Handling |  |  |
-| Other |  |  |
+| Logic | Forgot the walk back to the car |  |
+| Edge Cases | x | x |
+| Output Handling | x | x |
+| Other | messy structure | clear structure |
 
 ### Reflection
 
