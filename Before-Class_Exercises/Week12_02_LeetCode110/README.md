@@ -1,13 +1,13 @@
-# [Platform] [Problem ID] - [Problem Title]
+# [LeetCode] [110] - [Balanced Binary Tree]
 
 Use this template to review your coding performance for each problem. Write clearly and use your own words.
 
 ## 1. Problem Information
 
-- **Platform:** UVa / LeetCode
-- **Problem ID:** 
-- **Problem Title:** 
-- **Problem Link:** 
+- **Platform:** LeetCode
+- **Problem ID:** 110
+- **Problem Title:** Balanced Binary Tree
+- **Problem Link:** https://leetcode.com/problems/balanced-binary-tree/description/
 - **Source Code (Fail):** [src/your-file-name.cpp](./src/your-file-name.cpp)
 - **Source Code (Correct/Accepted):** [src/your-file-name.cpp](./src/your-file-name.cpp)
 
@@ -55,7 +55,29 @@ Show the code that failed first, then show the corrected version.
 ### Fail Code
 
 ```cpp
-// Paste the incorrect, incomplete, or rejected version here.
+class Solution 
+{
+public:
+    int getHeight(TreeNode* node) 
+    {
+        if (node == nullptr) return 0;
+
+        int leftHeight = getHeight(node->left);
+        int rightHeight = getHeight(node->right);
+
+        return max(leftHeight, rightHeight) + 1;
+    }
+
+    bool isBalanced(TreeNode* root) 
+    {
+        if (root == nullptr) return true;
+
+        int leftHeight = getHeight(root->left);
+        int rightHeight = getHeight(root->right);
+
+        return abs(leftHeight - rightHeight) <= 1;
+    }
+};
 ```
 
 **Why it failed:**
@@ -66,7 +88,31 @@ Show the code that failed first, then show the corrected version.
 ### Correct Code
 
 ```cpp
-// Paste the corrected or accepted version here.
+class Solution 
+{
+public:
+    int getHeight(TreeNode* node) 
+    {
+        if (node == nullptr) return 0;
+
+        int leftHeight = getHeight(node->left);
+        int rightHeight = getHeight(node->right);
+
+        return max(leftHeight, rightHeight) + 1;
+    }
+
+    bool isBalanced(TreeNode* root) 
+    {
+        if (root == nullptr) return true;
+
+        int leftHeight = getHeight(root->left);
+        int rightHeight = getHeight(root->right);
+
+        return abs(leftHeight - rightHeight) <= 1
+            && isBalanced(root->left)
+            && isBalanced(root->right);
+    }
+};
 ```
 
 **Why it works:**
