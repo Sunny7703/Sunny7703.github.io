@@ -58,24 +58,20 @@ Show the code that failed first, then show the corrected version.
 class Solution
 {
 public:
-    int getHeight(TreeNode* node)
+    int helper(TreeNode* node, int currentVal)
     {
-        if (node == nullptr) return 0;
+        if (node == nullptr) return currentVal;
 
-        int leftHeight = getHeight(node->left);
-        int rightHeight = getHeight(node->right);
+        currentVal = currentVal * 2 + node->val;
 
-        return max(leftHeight, rightHeight) + 1;
+        if (node->left == nullptr && node->right == nullptr) return currentVal;
+
+        return helper(node->left, currentVal) + helper(node->right, currentVal);
     }
 
-    bool isBalanced(TreeNode* root)
+    int sumRootToLeaf(TreeNode* root)
     {
-        if (root == nullptr) return true;
-
-        int leftHeight = getHeight(root->left);
-        int rightHeight = getHeight(root->right);
-
-        return abs(leftHeight - rightHeight) <= 1;
+        return helper(root, 0);
     }
 };
 ```
@@ -91,26 +87,20 @@ public:
 class Solution
 {
 public:
-    int getHeight(TreeNode* node)
+    int helper(TreeNode* node, int currentVal)
     {
         if (node == nullptr) return 0;
 
-        int leftHeight = getHeight(node->left);
-        int rightHeight = getHeight(node->right);
+        currentVal = currentVal * 2 + node->val;
 
-        return max(leftHeight, rightHeight) + 1;
+        if (node->left == nullptr && node->right == nullptr) return currentVal;
+
+        return helper(node->left, currentVal) + helper(node->right, currentVal);
     }
 
-    bool isBalanced(TreeNode* root)
+    int sumRootToLeaf(TreeNode* root)
     {
-        if (root == nullptr) return true;
-
-        int leftHeight = getHeight(root->left);
-        int rightHeight = getHeight(root->right);
-
-        return abs(leftHeight - rightHeight) <= 1
-            && isBalanced(root->left)
-            && isBalanced(root->right);
+        return helper(root, 0);
     }
 };
 ```
