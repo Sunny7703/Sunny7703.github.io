@@ -55,8 +55,7 @@ Show the code that failed first, then show the corrected version.
 ### Fail Code
 
 ```cpp
-class Solution
-{
+class Solution{
 public:
     int helper(TreeNode* node, int currentVal)
     {
@@ -84,8 +83,7 @@ public:
 ### Correct Code
 
 ```cpp
-class Solution
-{
+class Solution{
 public:
     int helper(TreeNode* node, int currentVal)
     {
