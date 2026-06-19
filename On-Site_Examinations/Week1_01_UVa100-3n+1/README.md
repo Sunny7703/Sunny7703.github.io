@@ -7,8 +7,8 @@
 - **Problem ID:** 100
 - **Problem Title:** The 3n + 1 problem
 - **Problem Link:** https://onlinejudge.org/external/1/100.pdf
-- **Source Code (Fail):** [src/your-file-name.cpp](./src/your-file-name.cpp)
-- **Source Code (Correct/Accepted):** [src/your-file-name.cpp](./src/your-file-name.cpp)
+- **Source Code (Original code):** [src/your-file-name.cpp](./src/your-file-name.cpp)
+- **Source Code (Impoved code):** [src/your-file-name.cpp](./src/your-file-name.cpp)
 
 ## 2. Problem Statement in My Own Words
 
@@ -47,11 +47,11 @@ START
 END
 ```
 
-## 5. Fail Code vs Correct Code
+## 5. Original Code vs Improved Code
 
 Show the code that failed first, then show the corrected version.
 
-### My Code
+### Original Code
 
 ```cpp
 #include <iostream>
