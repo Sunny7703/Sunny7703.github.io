@@ -30,7 +30,6 @@ Adding two number a and b from single digits to the leftmost digits. If the sum 
 - What method did you finally use?
 - Why does this method work?
 - What edge cases did you consider?
-  A: (a, b) = (100000000, 999999999), (111111111 999999999), (0, 9)
 
 ## 4. Pseudocode
 
