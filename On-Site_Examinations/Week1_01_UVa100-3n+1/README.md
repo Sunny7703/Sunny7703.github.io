@@ -12,7 +12,8 @@
 
 ## 2. Problem Statement in My Own Words
 
-According to the algorithm, not until n = 1, the cycle count will be added once by running one step. From the input i and j, I need to output the maximum cycle count from the range i to j, including themselves.
+According to the algorithm, not until n = 1, the cycle count will be added once by running one step. From the input i and j, I need to output the maximum cycle count from the range i to j, including themselves. <img width="344" height="183" alt="截圖 2026-06-19 下午1 59 42" src="https://github.com/user-attachments/assets/998629d8-5337-4472-88e6-980281e8ea1e" />
+
 
 - What is the input?
 - What is the expected output?
