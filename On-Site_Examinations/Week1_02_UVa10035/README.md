@@ -49,9 +49,9 @@ START
 END
 ```
 
-## 5. Fail Code vs Correct Code
+## 5. My Code vs Alternative Method
 
-### Correct Code
+### My Code
 
 ```cpp
 #include <iostream>
@@ -99,7 +99,6 @@ int main()
 //23 777
 //2 777
 //3 777
-
 ```
 
 **How to improved:**
@@ -107,7 +106,7 @@ int main()
 - 
 - 
 
-### Another version (Code written by claude ai)
+### Alternative Method (Code written by Claude Ai)
 
 ```cpp
 #include <iostream>
