@@ -101,13 +101,6 @@ int main()
 **How can I improves:**
 - Calling Algorithm twice
   ```cpp
-  #original code
-  for(int k = i; k <= j; k++)
-        {
-            if(algorithm(k) > max)
-                max = algorithm(k);
-        }
-  #improved code
    for(int k = i; k <= j; k++)
         {
             int len = algorithm(k);
