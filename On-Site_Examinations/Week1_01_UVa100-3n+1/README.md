@@ -12,12 +12,14 @@
 
 ## 2. Problem Statement in My Own Words
 
-According to the algorithm, not until n = 1, the cycle count will be added once by running one step. From the input i and j, I need to output the maximum cycle count from the range i to j, including themselves. 
-
+According to the algorithm, while n != 1, the cycle count will be added once by running one step. From the range i to j, I need to output the maximum cycle count. 
 
 - What is the input?
+  i and j
 - What is the expected output?
+  Maximum cycle count
 - What are the main rules or constraints?
+  
 - What is the core task you must solve?
 
 ## 3. Thinking Logic and Solution Strategy
@@ -96,11 +98,28 @@ int main()
 
 ```
 
-**Why it failed:**
-
-- 
-- 
-
+**How can I improves:**
+- Calling Algorithm twice
+  ```cpp
+  #original code
+  for(int k = i; k <= j; k++)
+        {
+            if(algorithm(k) > max)
+                max = algorithm(k);
+        }
+  #improved code
+   for(int k = i; k <= j; k++)
+        {
+            int len = algorithm(k);
+            if(len > max)
+                max = len;
+        }
+  ```
+- The numbers within the sequence might overflow
+  ```cpp
+  int cycleLength(long n)
+  ```
+  
 ### Improved Code
 
 ```cpp
