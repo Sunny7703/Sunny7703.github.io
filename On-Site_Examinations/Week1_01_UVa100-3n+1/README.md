@@ -1,19 +1,18 @@
 # [UVa] [100] - [3n+1]
 
-Use this template to review your coding performance for each problem. Write clearly and use your own words.
 
 ## 1. Problem Information
 
-- **Platform:** UVa / LeetCode
-- **Problem ID:** 
-- **Problem Title:** 
-- **Problem Link:** 
+- **Platform:** UVa
+- **Problem ID:** 100
+- **Problem Title:** The 3n + 1 problem
+- **Problem Link:** https://onlinejudge.org/external/1/100.pdf
 - **Source Code (Fail):** [src/your-file-name.cpp](./src/your-file-name.cpp)
 - **Source Code (Correct/Accepted):** [src/your-file-name.cpp](./src/your-file-name.cpp)
 
 ## 2. Problem Statement in My Own Words
 
-Describe the problem in your own language. Do not copy the original statement.
+According to the algorithm, not until n = 1, the cycle count will be added once by running one step. From the input i and j, I need to output the maximum cycle count from the range i to j, including themselves.
 
 - What is the input?
 - What is the expected output?
