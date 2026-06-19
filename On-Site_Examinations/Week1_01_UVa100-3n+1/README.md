@@ -50,7 +50,6 @@ END
 
 ## 5. Original Code vs Improved Code
 
-Show the code that failed first, then show the corrected version.
 
 ### Original Code
 
