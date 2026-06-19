@@ -15,12 +15,9 @@
 According to the algorithm, while n != 1, the cycle count will be added once by running one step. From the range i to j, I need to output the maximum cycle count. 
 
 - What is the input?
-  i and j
+  A: i and j
 - What is the expected output?
-  Maximum cycle count
-- What are the main rules or constraints?
-  
-- What is the core task you must solve?
+  A: Maximum cycle count
 
 ## 3. Thinking Logic and Solution Strategy
 
@@ -116,7 +113,45 @@ int main()
 ### Improved Code
 
 ```cpp
-// Paste the corrected or accepted version here.
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+const int CACHE = 1000000;   // 涵蓋大部分中間峰值
+int memo[CACHE];             // 全域陣列，自動初始化為 0
+
+int cycleLength(long n)
+{
+    if (n == 1) return 1;
+    if (n < CACHE && memo[n] != 0)   // 0 代表「還沒算過」
+        return memo[n];
+
+    int result = (n % 2 == 1)
+        ? cycleLength(3 * n + 1) + 1
+        : cycleLength(n / 2) + 1;
+
+    if (n < CACHE) memo[n] = result;  // 只有在範圍內才存
+    return result;
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    int i, j;
+    while (cin >> i >> j)
+    {
+        cout << i << " " << j << " ";
+
+        int lo = min(i, j), hi = max(i, j);
+
+        int best = 0;
+        for (int k = lo; k <= hi; k++)
+            best = max(best, cycleLength(k));
+
+        cout << best << "\n";
+    }
+    return 0;
+}
 ```
 
 **Why it works:**
