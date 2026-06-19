@@ -1,34 +1,27 @@
-# [Platform] [Problem ID] - [Problem Title]
+# [UVa] [10783] - [Odd Sum]
 
-Use this template to review your coding performance for each problem. Write clearly and use your own words.
 
 ## 1. Problem Information
 
-- **Platform:** UVa / LeetCode
-- **Problem ID:** 
-- **Problem Title:** 
-- **Problem Link:** 
+- **Platform:** UVa
+- **Problem ID:** 10783
+- **Problem Title:** Odd Sum
+- **Problem Link:** https://onlinejudge.org/external/107/10783.pdf
 - **Source Code (Fail):** [src/your-file-name.cpp](./src/your-file-name.cpp)
 - **Source Code (Correct/Accepted):** [src/your-file-name.cpp](./src/your-file-name.cpp)
 
 ## 2. Problem Statement in My Own Words
 
-Describe the problem in your own language. Do not copy the original statement.
 
-- What is the input?
-- What is the expected output?
-- What are the main rules or constraints?
-- What is the core task you must solve?
 
 ## 3. Thinking Logic and Solution Strategy
-
-Explain how you thought about the problem and how you decided on your final approach.
 
 ### Initial Thoughts
 
 - What was your first idea?
+  
 - What difficulty did you notice at the beginning?
-
+  
 ### Final Strategy
 
 - What method did you finally use?
@@ -37,54 +30,77 @@ Explain how you thought about the problem and how you decided on your final appr
 
 ## 4. Pseudocode
 
-Write the main steps of your solution before showing the actual code.
+```text
+START
+1.
+2.
+3.
+4.
+END
+```
+
+## 5. My Code vs Alternative Method
+
+### My Code
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    int c = 1;
+    while(t--)
+    {
+        int a, b;
+        cin >> a >> b;
+        
+        if(b < a)
+            swap(a,b);
+        
+        int sum = 0;
+        for(int i = a; i <= b; i++)
+        {
+            if(i % 2 == 1)
+                sum += i;
+        }
+        cout << "Case " << c << ": " << sum << endl;
+        c++;
+    }
+}
+
+```
+
+**How to improved:**
+
+- k
+- 
+
+### Alternative Method (Code written by Claude Ai)
+
+```cpp
+
+```
+
+**Pseudocode**
 
 ```text
 START
 1. 
-2. 
-3. 
-4. 
 END
 ```
-
-## 5. Fail Code vs Correct Code
-
-Show the code that failed first, then show the corrected version.
-
-### Fail Code
-
-```cpp
-// Paste the incorrect, incomplete, or rejected version here.
-```
-
-**Why it failed:**
-
-- 
-- 
-
-### Correct Code
-
-```cpp
-// Paste the corrected or accepted version here.
-```
-
-**Why it works:**
-
-- 
-- 
-
-
 
 ## 6. Difference and Reflection
 
 ### Key Differences
 
-| Item | Fail Code | Correct Code |
+| Item | My Code | Alternative Method |
 |---|---|---|
 | Logic |  |  |
 | Edge Cases |  |  |
-| Output Handling |  |  |
+| Output Handling |  |
 | Other |  |  |
 
 ### Reflection
