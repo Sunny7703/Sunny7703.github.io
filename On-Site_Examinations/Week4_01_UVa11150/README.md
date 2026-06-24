@@ -47,13 +47,13 @@ Use this template to review your coding performance for each problem. Write clea
 ```text
 START
 1. while read n until end:
-2.     total = n
-3.     while n >= 3:
-4.         total += n / 3 // trade empties for new, drink them
-5.         n = n / 3 + n % 3 // new empties + leftover empties
-6.     if n == 2:
-7.         total += 1 // borrow 1, trade, drink, return
-8.     print total
+2. total = n
+3. while n >= 3:
+4. total += n / 3 // trade empties for new, drink them
+5. n = n / 3 + n % 3 // new empties + leftover empties
+6. if n == 2:
+7. total += 1 // borrow 1, trade, drink, return
+8. print total
 END
 ```
 
