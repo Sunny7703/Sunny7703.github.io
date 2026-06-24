@@ -46,11 +46,11 @@ Use this template to review your coding performance for each problem. Write clea
 ```text
 START
 1. while read (s, d) until end:
-2.     sum = 0
-3.     while sum < d:
-4.         sum += s      // this group uses s days
-5.         s++           // next group is 1 bigger
-6.     print s - 1       // took 1 extra step, so minus 1
+2. sum = 0
+3. while sum < d:
+4. sum += s // this group uses s days
+5. s++ // next group is 1 bigger
+6. print s - 1 // took 1 extra step, so minus 1
 END
 ```
 
