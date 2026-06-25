@@ -8,8 +8,8 @@ Use this template to review your coding performance for each problem. Write clea
 - **Problem ID:** 11559
 - **Problem Title:** Event Planning
 - **Problem Link:** https://onlinejudge.org/external/115/11559.pdf
-- **Source Code (Fail):** [11559-fail.cpp](./11559-fail.cpp)
-- **Source Code (Correct/Accepted):** [11559-correct.cpp](./11559-correct.cpp)
+- **Source Code (Fail):** [src/11559-fail.cpp](src./11559-fail.cpp)
+- **Source Code (Correct/Accepted):** [src/11559-correct.cpp](src./11559-correct.cpp)
 
 ## 2. Problem Statement in My Own Words
 
