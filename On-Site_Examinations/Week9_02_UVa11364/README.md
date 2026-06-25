@@ -9,20 +9,22 @@ Use this template to review your coding performance for each problem. Write clea
 - **Source Code (Correct/Accepted):** [src/ac.cpp](./src/ac.cpp)
 ## 2. Problem Statement in My Own Words
 Michael wants the minimum distance between his car and the stores he shopped, but back and forth.
-- **What is the input?** Number of test cases T, and for each case: the number of stores N, and the position of each store on a number line.
-- **What is the expected output?** For each test case: the minimum total distance Michael needs to walk — from the parking spot, visiting all stores, and returning to the parking spot.
-- **What are the main rules or constraints?** Parking spot is fixed at position 0. Store positions are integers from 1 to 99. At most 20 stores per test case.
-- **What is the core task you must solve?** Find the max and min positions among all stores. Since walking from min to max (or vice versa) covers all stores in one trip, the answer is (max - min) * 2.
+- Input: number of test cases T; each case has N stores and their positions on a number line
+- Output: minimum total walking distance — from parking spot, through all stores, back to parking spot
+- Constraints: parking at position 0, store positions 1–99, at most 20 stores
+- **Goal: find the cheapest valid (hotel, weekend) combo**
+
 ## 3. Thinking Logic and Solution Strategy
 Explain how you thought about the problem and how you decided on your final approach.
 ### Initial Thoughts
-- First idea was to find the farthest store and calculate the round-trip distance to it.
-- Didn't think carefully about the "return to parking spot" condition at first — only computed one-way distance.
+- What was your first idea?
+- What difficulty did you notice at the beginning?
 ### Final Strategy
-- Find the maximum and minimum positions among all stores.
-- Answer = (max - min) * 2.
-- This works because all stores are on a straight line; walking from min to max (or max to min) covers everything in one pass, and we must return, so multiply by 2.
-- Edge case: only one store → min == max → answer is 0 (handled automatically by the formula).
+- find max and min positions among all stores
+- answer = `(max - min) * 2`
+- works because all stores are on a line — one pass from min to max covers all, then multiply by 2 for the return
+- edge case: only one store → min == max → answer is 0 (handled by the formula automatically)
+
 ## 4. Pseudocode
 ```text
 START
@@ -60,8 +62,8 @@ int main()
 }
 ```
 **Why it failed:**
-- I didn't consider to walk by, so the answer /2.
-- My structure wasn't clear enough to debug quickly, so I didn't get enough time to correct my code.
+- I didn't consider to walk by, so the answer /2. 
+- By struture wasn't clear enough to decode quickly, so I don't get enough time to correct my code.
 ### Correct Code
 ```cpp
 #include <iostream>
@@ -103,11 +105,11 @@ int main()
 ### Key Differences
 | Item | Fail Code | Correct Code |
 |---|---|---|
-| Logic | Forgot to multiply by 2 for the return trip; only computed `(max - min)` | `(max - min) * 2` correctly accounts for both directions |
-| Edge Cases | Not explicitly considered, but the formula still handles single-store input correctly | Single store outputs 0 automatically |
-| Output Handling | Output value was wrong (half the correct answer) | Output is correct |
-| Other | Messy structure, hard to spot the bug under time pressure | Clean, well-organized structure, easy to locate the problem |
+| Logic | Forgot the walk back to the car |  `(max - min) * 2` correctly accounts for both directions |
+| Edge Cases | x | x |
+| Output Handling | x | x |
+| Other | messy structure | clear structure |
 ### Reflection
-- **What mistake did you make?** I only thought about "walking to the farthest store" and forgot that Michael has to walk back to the parking spot — missing the ×2.
-- **What did you learn from debugging this problem?** When the problem mentions a round trip, mark it explicitly in the pseudocode before writing any code. Clean code structure also speeds up debugging significantly.
-- **If you solve a similar problem again, what will you do better?** First confirm whether the starting point needs to be returned to. If yes, note ×2 in the pseudocode immediately. Also plan the code structure before writing to avoid messy code under pressure.
+- my mistake: only thought about walking to the farthest store — forgot Michael has to return to the parking spot, so missing the ×2
+- what I learned: when the problem mentions a round trip, mark it explicitly in the pseudocode before writing any code; clean structure also speeds up debugging under time pressure
+- next time: first confirm whether the start point needs to be returned to; if yes, note ×2 immediately in the pseudocode
